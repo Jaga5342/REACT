@@ -1,14 +1,16 @@
 
 import React from 'react'
 import ItemList from './ItemList';
-
+import {Grid} from 'semantic-ui-react';
 const Content = ({values,handleCheck,handleDelete,handleEdit,handleSave}) => {
 
   return (
   <main>
   <div className="container justify-content-center align-items-center ">
-     <div className="row">
-     <div className ="col-sm-12">
+     
+     <Grid>
+     <Grid.Row>
+     <Grid.Column>
      {(values.length) ? (
        <ItemList 
           values ={values}
@@ -22,9 +24,10 @@ const Content = ({values,handleCheck,handleDelete,handleEdit,handleSave}) => {
      <p className="text-center " style={{ marginTop:'7rem'}}>The List is EMPTY</p>
      )
      }
+     </Grid.Column>
+     </Grid.Row>
+     </Grid>
      </div>
-     </div>
-    </div>
   </main>
   )
 }

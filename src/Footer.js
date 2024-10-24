@@ -1,23 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { Container, Grid } from 'semantic-ui-react';
 
-const Footer = ({length}) => {
-  
+const Footer = ({ length }) => {
   return (
-    <footer className="bg-primary text-white py-2">
+    <footer style={{ backgroundColor: '#2185d0', color: 'white', padding: '1em' }}>
     
-    <div className="container">
-        <div className="row">
-          <div className="col-12  ">
-            <p className="mb-0">
-       List  {length ===1 ? "item" : "items"} = {length}
-      </p>
-      
-       </div>
-        </div>
-      </div>
+      <Container>
+        <Grid centered>
+          <Grid.Row>
+            <Grid.Column textAlign="center">
+              <p>
+                List {length === 1 ? 'item' : 'items'} = {length}
+                
+              </p>
+             
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
     </footer>
   );
 }
 
 export default Footer
-

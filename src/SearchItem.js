@@ -1,10 +1,12 @@
 import React from 'react'
-
+import { Form } from 'semantic-ui-react'
 const SearchItem = ({search,setSearch}) => {
   return (
-    <form className='searchForm' onSubmit ={(e) => e.preventDefault()}>
+    <Form className='searchForm' style={{ width: '100%'} } onSubmit ={(e) => e.preventDefault()}>
+    
     <label htmlFor="search">Search</label>
     <input 
+    fluid
     id='search'
     type="text"
     role='searchbox'
@@ -12,7 +14,8 @@ const SearchItem = ({search,setSearch}) => {
     value={search}
     onChange ={(e) => setSearch(e.target.value)}
     />
-    </form>
+    
+    </Form>
   )
 }
 

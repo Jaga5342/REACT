@@ -1,17 +1,19 @@
 import React from 'react';
-
-// Define the header style
-
+import { Container, Grid } from 'semantic-ui-react';
 
 const Header = (props) => {
   return (
-    <header className="bg-primary text-white " >
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-md-8 offset-md-2">
-            <h1 className="text-center py-3">{props.name}</h1>
-          </div>
-        </div>
+    <header style={{ backgroundColor: '#2185d0', color: 'white',padding:'30px',textAlign:'center',justifyContent:'center' }}>
+    <div>
+      <Container>
+        <Grid >
+          <Grid.Row>
+            <Grid.Column >
+              <h1 style={{textAlign:'center'}}>{props.name}</h1>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
       </div>
     </header>
   );
@@ -23,6 +25,3 @@ Header.defaultProps = {
 };
 
 export default Header;
-
-
-
