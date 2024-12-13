@@ -8,7 +8,9 @@ const Footer = ({ length }) => {
       <Container>
         <Grid centered>
           <Grid.Row>
-            <Grid.Column textAlign="center">
+            <Grid.Column 
+           
+            textAlign="center">
               <p>
                 List {length === 1 ? 'item' : 'items'} = {length}
                 

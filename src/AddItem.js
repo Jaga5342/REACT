@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Icon, Form, Input, Grid } from 'semantic-ui-react';
+import { useRef } from 'react';
 
 const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
+  const Refr=useRef();
   return (
     <Form onSubmit={handleSubmit} style={{ width: '100%', padding: '25px' }}>
       <Grid>
@@ -10,7 +12,7 @@ const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
             <Input
               fluid
               autoFocus
-              
+              ref={Refr}
               type="text"
               placeholder="Add Item"
               required
@@ -22,10 +24,11 @@ const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
             <Button
               fluid
               primary
+              onClick ={() => Refr.current.focus()}
               type="submit"
               aria-label="Add Item"
             >
-              <Icon name="plus" />
+              <Icon name="plus"/>
             </Button>
           </Grid.Column>
         </Grid.Row>

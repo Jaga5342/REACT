@@ -8,7 +8,7 @@ function LineItem ({item,handleCheck,handleDelete,handleEdit }){
       <Checkbox
           
           type="checkbox"
-          onChange ={() => handleCheck(item.id)}
+          onChange ={() => handleCheck(item._id)}
           checked={item.checked}
       />
 
@@ -17,14 +17,14 @@ function LineItem ({item,handleCheck,handleDelete,handleEdit }){
       onDoubleClick={() => handleCheck(item.id)}>{item.item}</label>
        <Icon
        name= "edit me-3 text-primary"
-        onClick = {() => handleEdit(item.id)}
+        onClick = {() => handleEdit(item._id)}
         role="button"
         tabIndex="0"
         aria-label ={`Delete ${item.item}`}
         ></Icon>
        <Icon
        name="trash me-3  text-primary"
-       onClick ={() => handleDelete(item.id)}
+       onClick ={() => handleDelete(item._id)}
         role="button"
         tabIndex="0"
         aria-label ={`Edit ${item.item}`}

@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.loader {
+  text-align: center;
+  padding: 50px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.loader::after {
+  content: "🔄";
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

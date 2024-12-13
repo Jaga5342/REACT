@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "checked": true,
+      "item": "Art"
+    },
+    {
+      "id": "2",
+      "checked": true,
+      "item": "Content writing"
+    },
+    {
+      "id": "3",
+      "checked": true,
+      "item": "Coding"
+    },
+    {
+      "id": "31",
+      "checked": false,
+      "item": "git"
+    },
+    {
+      "id": "311",
+      "checked": false,
+      "item": "crafted"
+    },
+    {
+      "id": "3111",
+      "checked": false,
+      "item": "kanguva"
+    },
+    {
+      "id": "31111",
+      "checked": false,
+      "item": "bucks"
+    }
+  ]
+}
